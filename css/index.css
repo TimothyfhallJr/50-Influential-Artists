@@ -1,3 +1,11 @@
+.default-link {
+  text-decoration: none;
+  color: black;
+}
+.flex-flex {
+  display: flex;
+  justify-content: center;
+}
 html,
 body,
 div,
@@ -89,24 +97,95 @@ video {
 * {
   font-size: 62l 0.5%;
 }
-header nav {
+img:hover {
+  opacity: 80%;
+}
+@media (max-width: 500px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
+  header nav {
+    display: flex;
+    justify-content: center;
+    border-left: 1px solid black;
+  }
+  header nav a {
+    text-decoration: none;
+    padding: 2%;
+    font-size: 2rem;
+    color: black;
+    border-right: 1px solid black;
+  }
+  header nav a:hover {
+    font-weight: bolder;
+  }
+  header nav a:hover #home {
+    border-right: 1px solid black;
+  }
+}
+.title-container .container {
   display: flex;
   justify-content: center;
 }
-header nav a {
-  text-decoration: none;
-  padding: 2%;
-  font-size: 2rem;
-  color: black;
-}
-header nav a #home {
-  padding-right: 3px;
-  border: 5px solid black;
-}
 .title-container .container .intro {
-  width: 10%;
+  width: 50%;
+  position: center;
+  background-blend-mode: darken;
+}
+.title-container .container .imageText {
+  color: white;
+  position: absolute;
+  margin-top: 5%;
+  font-size: 2rem;
+  padding-right: 8%;
+  padding-top: 4%;
+  font-weight: bolder;
+}
+.title-container .container #br {
+  text-align: center;
+  padding-left: 30%;
+  position: absolute;
 }
 .title-container .container .button {
-  background: red;
-  color: white;
+  position: absolute;
+  text-align: bottom;
+  margin-top: 18%;
+  border: 1px solid black;
+}
+.title-container .container .button:hover {
+  background: #cccccc;
+}
+@media (max-width: 500px) {
+  .title-container .container .button {
+    margin-top: 50%;
+  }
+}
+.artists-container {
+  margin: 2%;
+  display: flex;
+  justify-content: center;
+  border-top: 1px solid black;
+  padding: 1%;
+}
+.artists-container .artist {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 40%;
+  text-align: center;
+  padding: 2% 0 2% 0;
+}
+.artists-container .artist img {
+  width: 50%;
+  margin-top: 2%;
+}
+.artists-container .bio {
+  width: 90%;
+  margin-top: 2%;
+}
+.artists-container a {
+  margin-top: 2%;
+  text-decoration: none;
+  color: black;
 }
