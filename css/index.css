@@ -103,17 +103,10 @@ header nav a #home {
   padding-right: 3px;
   border: 5px solid black;
 }
-.title-container {
-  border: 4px solid green;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  box-sizing: border-box;
-  align-content: center;
+.title-container .container .intro {
+  width: 10%;
 }
-.title-container .contaner {
-  border: 1px solid red;
-}
-.title-container .contaner .imageText {
+.title-container .container .button {
+  background: red;
   color: white;
 }
