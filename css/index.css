@@ -100,28 +100,28 @@ video {
 img:hover {
   opacity: 80%;
 }
+header nav {
+  display: flex;
+  justify-content: center;
+  border-left: 1px solid black;
+}
+header nav a {
+  text-decoration: none;
+  padding: 2%;
+  font-size: 2rem;
+  color: black;
+  border-right: 1px solid black;
+}
+header nav a:hover {
+  font-weight: bolder;
+}
+header nav a:hover #home {
+  border-right: 1px solid black;
+}
 @media (max-width: 500px) {
-  header {
+  header nav a:hover #home {
     flex-direction: column;
     align-items: center;
-  }
-  header nav {
-    display: flex;
-    justify-content: center;
-    border-left: 1px solid black;
-  }
-  header nav a {
-    text-decoration: none;
-    padding: 2%;
-    font-size: 2rem;
-    color: black;
-    border-right: 1px solid black;
-  }
-  header nav a:hover {
-    font-weight: bolder;
-  }
-  header nav a:hover #home {
-    border-right: 1px solid black;
   }
 }
 .title-container .container {
@@ -158,7 +158,7 @@ img:hover {
 }
 @media (max-width: 500px) {
   .title-container .container .button {
-    margin-top: 50%;
+    margin-top: 25%;
   }
 }
 .artists-container {

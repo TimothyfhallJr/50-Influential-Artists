@@ -1,12 +1,10 @@
 
 header {
-    @media @mobile{
-        flex-direction:column;
-        align-items: center;
+    
     nav { display: flex;
         justify-content: center;
         border-left: 1px solid black;
-     
+        
         
 
         a {
@@ -19,6 +17,9 @@ header {
             font-weight: bolder;
             #home{
                 border-right: 1px solid black;
+                @media @mobile{
+                    flex-direction:column;
+                    align-items: center;
                 
                 }
             }
