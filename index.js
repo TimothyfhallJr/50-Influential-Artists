@@ -223,12 +223,12 @@ console.log(artists[8]);
  * For example, if getArtistByIndex is invoked with the inventory and the number 0,
  * it will return `The artist at index 0 is Amedeo Modigliani`.
 */
-function getArtistByIndex(artists,index) {  //array[2]
+function getArtistByIndex(artists,id) {  //array[2]
   /* code here */
-  artists[index];
-  return `the artist at ${num} is ${artists[index].name}`
+
+  return `the artist at index ${id}  is ${artists[id].name}`
 }
-console.log(getArtistByIndex(artists.name));
+console.log(getArtistByIndex(artists, 6));
   
   /**
 
@@ -241,21 +241,29 @@ console.log(getArtistByIndex(artists.name));
  * For example, if removeArtist is invoked with the data and the number 0,
  * it will remove Amedeo Modigliani from our dataset.
 */
-function removeArtist(/*code here*/) {
+function removeArtist(/*code here*/artists,id) {
     /* code here */
+   return artists.splice(id,1)
   }
-  
+  console.log(removeArtist(artists,6));
   /**
 
 
 /* Task 5: Create a function called lotsOfArt() that takes artists as an argument and returns an array with names of artists who painted more than 100 paintings */
 
-function lotsOfArt(/* Code here */){
+function lotsOfArt(/* Code here */artists){
 
     /* Code here */
-
+    const result= [];
+    for (let item of artists) {
+     if (item.paintings >100 ){
+       result.push(item);
+     }     
+  
+ }
+return result;
   }
-
+console.log(lotsOfArt(artists));
 
 /* Task 6: Create a function called `addArtist` that can accept an array of information and add it to the artists array. Then, Add a 21st artist to the array (you) with custom information! 👩‍🎨👨‍🎨
 
@@ -266,25 +274,41 @@ genre: Web Design,
 nationality: Your Nationality Here
 bio: Add 1-2 sentences (or use lorem ipsum) "*/
 
-function addArtist(/* Code here */){
 
-    /* Code here */
-
-  }
-
-
-
-
+    function addArtist(id, name, years, genre, bio){
+      var newArtist = {
+        'id': id,
+        'name': name,
+        'years': years,
+        'genre': genre,
+        'bio': bio,
+      };
+    
+      artists.push(newArtist);
+    
+      
+      return artists;
+    }
+    console.log(addArtist(51,'Timothy hall','1982-present','metal','I love role-playing games.  That goes for tabletop or video.'));
 
 // 🎨🎨 STRETCH 🎨🎨//
 
 /* STRETCH 1: Create a function called get20s() that takes data as an argument and returns an array with names of artists who were born the 20th century (1800-1900) */
 
-function get20s(/* Code here */){
+function get20s(artists){
 
     /* Code here */
-
+    const result= [];
+    for (let item of artists) {
+     if (item.years == 1800-1900 ){
+       result.push(item);
+     }     
+  
+ }
+return result;
   }
+console.log(lotsOfArt(artists));
+
 
 /* STRETCH 2: Programtically console.log HTML element structure 
 
