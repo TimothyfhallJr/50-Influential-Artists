@@ -1,0 +1,79 @@
+// .intro{
+//     width: 70%;
+// }
+.title-container{
+    .container{
+        display: flex;
+        justify-content: center;
+        .intro{
+            width: 50%; 
+            position: center;
+            background-blend-mode: darken;
+        }
+        
+            .imageText{
+            color: white;
+            position: absolute;
+           
+            margin-top: 5%;
+            font-size:2rem;
+            padding-right: 8%;
+            padding-top: 4%;
+            font-weight: bolder;
+            }
+            #br{
+                text-align: center;
+                padding-left: 30%;
+                position: absolute;
+            }
+            
+        
+        
+        .button{
+            position: absolute;
+            text-align: bottom;
+            margin-top: 18%;
+            border: 1px solid black;
+            .but (@background-color, @color) {
+                background-color: @white;
+                color: @black;
+            }
+            &:hover{
+                background: darken(white, 20%);
+            }
+            @media @mobile{
+                margin-top: 25%;
+            }
+        
+    }
+    
+}
+    }
+    .artists-container {
+        margin: 2%;
+        .flex-flex;
+        border-top: 1px solid @black;
+        padding: 1%;
+        
+        .artist {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 40%;
+            text-align: center;
+            padding: 2% 0 2% 0;
+            img {
+                width: 50%;
+                margin-top: 2%;
+            }
+            }
+            .bio {
+                width: 90%;
+                margin-top: 2%;
+            }
+            a {
+                margin-top: 2%;
+                .default-link;
+            }
+        }
+    
